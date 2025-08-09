@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="header">
+        <h1>Student Management System</h1>
+      </div>
+    </header>
+    <main>
+      <div id="main-wraprer">
+        <!-- LEFT SIDE PORTION START -->
+        <div class="left-main-wraper">
+          <div class="left-form">
+            <form>
+              <fieldset id="fields-main">
+                <legend>Enter Details</legend>
+                <div class="left-inpt-field">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" />
+                </div>
+                <div class="left-inpt-field">
+                  <label for="age">Age</label>
+                  <input type="number" id="age" />
+                </div>
+
+                <div class="left-inpt-field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" />
+                </div>
+                <div class="left-inpt-field">
+                  <label for="gender">Gender</label>
+                  <input type="text" id="gender" />
+                </div>
+                <div class="left-inpt-field">
+                  <label for="grade">Grade</label>
+                  <input type="number" id="grade" />
+                </div>
+                <div class="left-inpt-field">
+                  <label for="contact">Contact No.</label>
+                  <input type="tel" id="contact" />
+                </div>
+                <div class="left-inpt-field">
+                  <label for="dob">D.O.B</label>
+                  <input type="date" id="dob" />
+                </div>
+                <div class="left-inpt-field">
+                  <label for="address">Address</label>
+                  <input type="text" id="address" />
+                </div>
+              </fieldset>
+            </form>
+
+            <!-- LEFT BUTTON START -->
+            <div class="addstudentbtn-wraper">
+              <button id="addstudent-btn">Add Student</button>
+            </div>
+            <div id="major-btn">
+              <button id="update-btn">Update</button>
+
+              <button id="delet-btn">Delet</button>
+
+              <button id="addmarks-btn">Add Marks</button>
+
+              <button id="viewallstn-btn">View All</button>
+            </div>
+            <!-- LEFT BUTTON END -->
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE PORTION START -->
+        <div class="right-main-wraper">
+          <div class="right-form">
+            <!-- DATA MODAL -->
+            <div id="data-modal">
+              <form class="modal-content">
+                <h3>Update Student</h3>
+                <div class="left-inpt-field">
+                  <label for="new-name">New Name</label>
+                  <input type="text" id="new-name" placeholder="optional" />
+                </div>
+                <div class="left-inpt-field">
+                  <label for="new-age">New Age</label>
+                  <input type="number" id="new-age" placeholder="optional" />
+                </div>
+
+                <div class="left-inpt-field">
+                  <label for="new-email">New Email</label>
+                  <input type="email" id="new-email" placeholder="optional" />
+                </div>
+                <div class="left-inpt-field">
+                  <label for="new-gender">Update Gender</label>
+                  <input type="text" id="new-gender" placeholder="optional" />
+                </div>
+                <div class="left-inpt-field">
+                  <label for="old-grade">Old-Grade</label>
+                  <input
+                    type="number"
+                    id="old-grade"
+                    required
+                    placeholder="mendatory"
+                  />
+                </div>
+                <div class="left-inpt-field">
+                  <label for="New-grade">New-Grade</label>
+                  <input type="number" id="New-grade" placeholder="optional" />
+                </div>
+                <div class="left-inpt-field">
+                  <label for="old-roll">Roll-Number</label>
+                  <input
+                    type="number"
+                    id="old-roll"
+                    required
+                    placeholder="mendatory"
+                  />
+                </div>
+                <div class="left-inpt-field">
+                  <label for="new-contact">Contact No.</label>
+                  <input type="tel" id="new-contact" placeholder="optional" />
+                </div>
+                <div class="left-inpt-field">
+                  <label for="new-dob">D.O.B</label>
+                  <input type="date" id="new-dob" placeholder="optional" />
+                </div>
+                <div class="left-inpt-field">
+                  <label for="new-address">New Address</label>
+                  <input type="text" id="new-address" placeholder="optional" />
+                </div>
+                <div class="update-form-btn">
+                  <button id="cancel-btn">Cancel</button>
+                  <button id="update-submit">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- DATA MODAL END -->
+
+            <!-- RIGHT-FORM-TOP SECTION START -->
+            <div id="right-form-top-sec">
+              <h3>Find Student</h3>
+              <input type="number" id="stn-grade-1" placeholder="Grade" />
+              <input type="number" id="stn-roll" placeholder="Rollnumber" />
+              <button id="serach-student">Search</button>
+            </div>
+            <!-- RIGHT MIDDLE PART SHOW DATA -->
+
+            <div id="show-all-data"></div>
+            <!-- SHORT DATA MODEL FORM -->
+            <div id="data-model-update-2">
+              <h3>Enter Student Grade, Rollnumber</h3>
+              <div class="wraper-data-model-short">
+                <input
+                  type="number"
+                  id="stn-grade-fetch"
+                  placeholder="Current Grade"
+                />
+                <input
+                  type="number"
+                  id="stn-roll-fecth"
+                  placeholder="Current Rollnumber"
+                />
+                <button id="cancel-update">Cancel</button>
+                <button id="serach-update">Search</button>
+              </div>
+            </div>
+            <!-- DELET MODAL START -->
+
+            <div id="Delete-model">
+              <h3>Enter Student Grade, Rollnumber</h3>
+              <div class="wraper-data-model-short">
+                <input
+                  type="number"
+                  id="dlt-modal-grade"
+                  placeholder="Current Grade"
+                />
+                <input
+                  type="number"
+                  id="dlt-modal-roll"
+                  placeholder="Current Rollnumber"
+                />
+                <button id="cancel-dlt-modal">Cancel</button>
+                <button id="serach-dlt-modal">Delete</button>
+              </div>
+            </div>
+            <!-- VIEW ALL MODAL -->
+            <div id="viewall-model">
+              <h3>Enter Student Grade</h3>
+              <div class="wraper-data-model-short">
+                <input
+                  type="number"
+                  id="view-All-grade"
+                  placeholder="Current Grade"
+                />
+
+                <button id="cancel-Viewall-modal">Cancel</button>
+                <button id="serach-Viewall-modal">Search</button>
+              </div>
+            </div>
+
+            <!-- ADDMARKS MODEL -->
+            <div id="addmarks-model">
+              <h3>Enter Student Grade, Rollnumber</h3>
+              <div class="wraper-data-model-short">
+                <input
+                  type="number"
+                  id="marks-modal-grade"
+                  placeholder="Current Grade"
+                />
+                <input
+                  type="number"
+                  id="marks-modal-roll"
+                  placeholder="Current Rollnumber"
+                />
+                <button id="cancel-mark-modal">Cancel</button>
+                <button id="serach-mark-modal">Search</button>
+              </div>
+            </div>
+
+            <!-- Addmarks model main -->
+
+            <div id="addmark-main-model">
+              <h3>Add Subject, Marks</h3>
+              <div id="appendsubjectInp">
+                <div>
+                  <input type="text" class="subject" placeholder="Subject" />
+                  <input type="number" class="mark" placeholder="Marks" />
+                </div>
+              </div>
+              <div class="cacelbtnmark">
+                <button id="cancelmarkbtn">
+                  <i class="fa fa-close" style="color: red"></i>
+                </button>
+              </div>
+
+              <div class="addmarskbtn-Wraper">
+                <button id="addmarksbtn">+add</button>
+                <button id="fetchmarksbtn">Update</button>
+              </div>
+            </div>
+            <!-- ASSIGN TEACHER MODEL -->
+
+            <div id="addteacher-model">
+              <h3>Add Teacher in class</h3>
+             
+                <div class="wraper-teacher-modal">
+                  <input type="text" id="teacName" placeholder="Enter Teacher Name" />
+                  <input type="number" id="teacGrade" placeholder="Enter Grade" />
+ 
+                <button id="cancelTechbtn">Cencel</button>
+                <button id="addTeacherBtn">Update</button>
+                </div>
+            
+            </div>
+             
+
+            <!-- RIGHT-BOTTOM SECTION INCLUDED BUTTON -->
+            <div id="rest-below-btn">
+              <button id="assignteacher-btn">Add Teacher</button>
+              <button id="clear-screen">Clear</button>
+              <div class="last-right">
+                <input
+                  type="number"
+                  id="teacher-grade"
+                  placeholder="Enter Grade"
+                />
+                <button id="viewteacher-btn">View Teacher</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- SCRIPT START -->
+    <script src="project.js"></script>
+  </body>
+</html>

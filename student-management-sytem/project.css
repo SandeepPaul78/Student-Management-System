@@ -1,0 +1,310 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+#header {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: rgb(49, 48, 48);
+  height: 10vh;
+}
+
+#header h1 {
+  font-size: 2.5rem;
+  color: #ffff00;
+}
+
+#main-wraprer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 85vh;
+}
+.left-main-wraper {
+  width: 30%;
+
+  height: 85vh;
+}
+
+.right-main-wraper {
+  width: 70%;
+  background: rgb(47, 46, 46);
+  height: 85vh;
+}
+
+.left-form {
+  padding: 20px;
+  background: rgb(49, 48, 48);
+  position: relative;
+  color: white;
+}
+#fields-main {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+.left-inpt-field {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.left-inpt-field input {
+  width: 50%;
+  padding: 7px;
+  border-radius: 1rem;
+}
+
+.addstudentbtn-wraper {
+  width: 100%;
+  margin-top: 1rem;
+}
+.addstudentbtn-wraper button {
+  width: 100%;
+  padding: 8px;
+}
+.right-form {
+  /* border: 10px groove white; */
+  position: relative;
+}
+#major-btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+#major-btn button {
+  padding: 8px;
+}
+
+#right-form-top-sec {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  background: rgb(43, 41, 41);
+  margin: 0.7rem 0;
+}
+#right-form-top-sec input {
+  border-radius: 0.4rem;
+}
+
+#right-form-top-sec button {
+  width: 20%;
+  padding: 5px;
+
+  color: white;
+}
+#right-form-top-sec h3 {
+  padding: 5px;
+  color: white;
+}
+#show-all-data {
+  height: 64vh;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  overflow-y: scroll;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#rest-below-btn {
+  height: 10vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(44, 43, 43);
+}
+#rest-below-btn button {
+  padding: 8px;
+}
+#clear-screen {
+  width: 7rem;
+}
+
+.last-right {
+  display: flex;
+  gap: 1rem;
+}
+.last-right input,
+button {
+  padding: 8px;
+  border-radius: 0.4rem;
+}
+#data-modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  background: grey;
+  width: 40%;
+  z-index: 100;
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+.modal-content h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.update-form-btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#data-model-update-2 {
+  display: none;
+  width: 30%;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  background: grey;
+  /* border: 1px solid red; */
+}
+
+.wraper-data-model-short {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.wraper-data-model-short input {
+  padding: 8px;
+  width: 100%;
+}
+#data-model-update-2 h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+#Delete-model {
+  display: none;
+  width: 30%;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  background: grey;
+  /* border: 1px solid red; */
+}
+#Delete-model h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#viewall-model {
+  display: none;
+  width: 30%;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  background: grey;
+}
+#viewall-model h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.wraper-data-model-short #view-All-grade {
+  grid-column: 1/3;
+}
+#addmarks-model {
+  display: none;
+  width: 30%;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  background: grey;
+}
+#addmarks-model h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+button {
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  background: black;
+  color: white;
+  font-weight: 600;
+  box-shadow: inset 1px 11px 10px rgba(255, 255, 255, 0.4);
+}
+#addmark-main-model {
+  display: none;
+  width: 40%;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  background: grey;
+  color: white;
+}
+#addmark-main-model h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.cacelbtnmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#appendsubjectInp input {
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.2rem;
+}
+#appendsubjectInp {
+  height: 200px;
+  overflow-y: scroll;
+}
+.addmarskbtn-Wraper {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.5rem auto;
+}
+.addmarskbtn-Wraper button {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+#addteacher-model {
+  display: none;
+  width: 35%;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  background: grey;
+  color: white;
+}
+#addteacher-model h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.wraper-teacher-modal{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap : 1rem;
+  padding : 1rem;
+
+}
+
+.wraper-teacher-modal input{
+   padding: 0.2rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.2rem;
+}
